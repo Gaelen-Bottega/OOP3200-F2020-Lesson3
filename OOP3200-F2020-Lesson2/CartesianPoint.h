@@ -16,8 +16,14 @@ public:
 	/* Deconstructor - Memory cleanup */
 	~CartesianPoint();
 
+	/* Copy Constructor */
+	CartesianPoint(const CartesianPoint& point2);
+
 	/* Overloading operators */
+	CartesianPoint operator+(const CartesianPoint& point2) const;
+
 	double operator-(const CartesianPoint& point_to) const;
+	bool operator==(const CartesianPoint& other_point) const;
 
 	/* Accessors: Used to query the state of the object */
 
